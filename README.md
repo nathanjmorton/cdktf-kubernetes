@@ -54,14 +54,19 @@ kubectl apply -f local-registry-configmap.yaml --kubeconfig kubeconfig.yaml
 8. build and push the container image to the local registry (frontend and backend)
 
 ```tsx
-cd front/backend
+cd frontend
+yarn deploy
+cd ../backend
 yarn deploy
 ```
 
-8. deploy cdktf app stacks separately
+9.
+
+10. deploy cdktf app stacks separately (install the app dependencies first)
 
 ```tsx
 cd app
+yarn
 cdktf deploy app
 cdktf deploy app-test
 ```
